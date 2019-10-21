@@ -13,7 +13,7 @@ public class ClassifiedCounterService {
 	public Classified processClassified(Classified classified) {
 		classified.setNumOfWords(count(classified.getText()));
 		classified.setAmount(findPrice(classified.getText()));
-		
+
 		return classified;
 	}
 
@@ -27,14 +27,14 @@ public class ClassifiedCounterService {
 		}
 		return count;
 	}
-	
+
 	private String findPrice(String text) {
-		Pattern p = Pattern.compile("(\\d{1,3}(.\\d{3})*(,\\d+)?)(\\p{Sc}| *ευρώ| *euro)");
+		Pattern p = Pattern.compile("(\\d{1,3}(.\\d{3})*(,\\d+)?)(\\p{Sc}| *ευρω| *euro)");
 		Matcher matcher = p.matcher(text);
 		if (matcher.find()) {
 			return matcher.group();
 		}
-		
+
 		return "";
 	}
 }
