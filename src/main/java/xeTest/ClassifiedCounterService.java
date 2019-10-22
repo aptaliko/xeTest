@@ -10,6 +10,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class ClassifiedCounterService {
 
+	public ClassifiedCounterService() {
+		// empty constructor
+	}
+
 	public Classified processClassified(Classified classified) {
 		classified.setNumOfWords(count(classified.getText()));
 		classified.setAmount(findPrice(classified.getText()));

@@ -1,5 +1,6 @@
 package xeTest;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Map;
@@ -20,12 +21,12 @@ public class ClassifiedCounterServiceTest {
 	
 	@Test
 	public void testCounter () {
- 		for (Map.Entry<String,Integer> set: Util.classifiedToWords.entrySet()) {
+ 		for (Map.Entry<String, Integer> set: Util.classifiedToWords.entrySet()) {
 			Classified classified = new Classified();
 			classified.setText(set.getKey());
 			classified = classifiedCounterService.processClassified(classified);
-			
-			assertTrue(classified.getNumOfWords() == set.getValue());
+
+			assertEquals(classified.getNumOfWords(), (int) set.getValue());
 		}
 	}
 }
