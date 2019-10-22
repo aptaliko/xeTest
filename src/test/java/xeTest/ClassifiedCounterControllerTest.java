@@ -7,6 +7,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.nio.charset.Charset;
 import java.util.Map;
+
+import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -48,18 +50,17 @@ public class ClassifiedCounterControllerTest {
 
 	@Test
 	public void testCounter() throws Exception {
-		/* for (Map.Entry<String, Integer> set : Util.classifiedToWords.entrySet()) { */
-
-		String input = "{\"Text\" : \"Test\""
-				+ "}";
-
-		MvcResult result = restMvc.perform(post("/classified/count").contentType(APPLICATION_JSON_UTF8).content(input))
-				.andExpect(status().isOk()).andReturn();
-
-		MockHttpServletResponse response = result.getResponse();
-		String json = response.getContentAsString();
-		Classified classified = new ObjectMapper().readValue(json, Classified.class);
-		assertEquals(classified.getNumOfWords(), 1);
-	}
-	// }
+		for (Map.Entry<String, Integer> set : Util.classifiedToWords.entrySet()) {
+			JSONObject jo = new JSONObject();
+			jo.put("Text", set.getKey());
+	
+			MvcResult result = restMvc.perform(post("/classified/count").contentType(APPLICATION_JSON_UTF8).content(jo.toString()))
+					.andExpect(status().isOk()).andReturn();
+	
+			MockHttpServletResponse response = result.getResponse();
+			String json = response.getContentAsString();
+			Classified classified = new ObjectMapper().readValue(json, Classified.class);
+			assertEquals(classified.getNumOfWords(), (int)set.getValue());
+		}
+	 }
 }

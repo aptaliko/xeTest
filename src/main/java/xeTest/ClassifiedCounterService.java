@@ -27,6 +27,7 @@ public class ClassifiedCounterService {
 		for (String word : wordList) {
 			if (word.length() > 1) {
 				count++;
+				System.out.println(word);
 			}
 		}
 		return count;
