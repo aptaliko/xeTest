@@ -1,4 +1,4 @@
-package xeTest.services;
+package classifiedcounter.services;
 
 import com.fasterxml.jackson.annotation.JsonSetter;
 

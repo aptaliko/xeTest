@@ -1,4 +1,4 @@
-package xeTest.services;
+package classifiedcounter.services;
 
 import java.util.Arrays;
 import java.util.List;

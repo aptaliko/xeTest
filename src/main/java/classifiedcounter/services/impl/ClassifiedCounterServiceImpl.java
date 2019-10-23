@@ -1,4 +1,4 @@
-package xeTest.services.impl;
+package classifiedcounter.services.impl;
 
 import java.util.Arrays;
 import java.util.List;
@@ -7,8 +7,8 @@ import java.util.regex.Pattern;
 
 import org.springframework.stereotype.Service;
 
-import xeTest.services.Classified;
-import xeTest.services.ClassifiedCounterService;
+import classifiedcounter.services.Classified;
+import classifiedcounter.services.ClassifiedCounterService;
 
 @Service
 public class ClassifiedCounterServiceImpl implements ClassifiedCounterService {

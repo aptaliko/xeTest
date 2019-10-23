@@ -1,4 +1,4 @@
-package xeTest.web;
+package classifiedcounter.web;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import xeTest.Util.Util;
-import xeTest.services.Classified;
-import xeTest.services.ClassifiedCounterService;
+import classifiedcounter.Util.Util;
+import classifiedcounter.services.Classified;
+import classifiedcounter.services.ClassifiedCounterService;
 
 @RestController
 @RequestMapping("classified")

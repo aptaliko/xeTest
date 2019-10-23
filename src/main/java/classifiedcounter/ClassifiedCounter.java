@@ -1,11 +1,11 @@
-package xeTest;
+package classifiedcounter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("xeTest.services")
+@ComponentScan("classifiedcounter.services")
 public class ClassifiedCounter {
 
 	public static void main(String[] args) {

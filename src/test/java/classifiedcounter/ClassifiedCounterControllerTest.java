@@ -1,4 +1,4 @@
-package xeTest;
+package classifiedcounter;
 
 import static org.junit.Assert.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -6,10 +6,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import xeTest.Util.Util;
-import xeTest.services.Classified;
-import xeTest.services.ClassifiedCounterService;
-import xeTest.web.ClassifiedCounterController;
+import classifiedcounter.Util.Util;
+import classifiedcounter.services.Classified;
+import classifiedcounter.services.ClassifiedCounterService;
+import classifiedcounter.web.ClassifiedCounterController;
 
 import java.nio.charset.Charset;
 import java.util.Map;
@@ -29,7 +29,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ComponentScan("xeTest.services")
+@ComponentScan("classifiedcounter.services")
 @SpringBootTest
 public class ClassifiedCounterControllerTest {
 
