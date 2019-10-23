@@ -37,7 +37,7 @@ public class ClassifiedCounterServiceImpl implements ClassifiedCounterService {
 	}
 
 	private String findPrice(String text) {
-		Pattern p = Pattern.compile("(\\d{1,3}(.\\d{3})*(,\\d+)?)(\\p{Sc}| *ÃŽÂµÃ�â€¦Ã�ï¿½Ã�â€°| *euro)");
+		Pattern p = Pattern.compile("(\\d{1,3}(.\\d{3})*(,\\d+)?)(\\p{Sc}| *ευρω| *euro)");
 		Matcher matcher = p.matcher(text);
 		if (matcher.find()) {
 			return matcher.group();

@@ -70,5 +70,5 @@ public class ClassifiedCounterControllerTest {
 			Classified classified = new ObjectMapper().readValue(json, Classified.class);
 			assertEquals(classified.getNumOfWords(), (int)set.getValue());
 		}
-	 }
+	}
 }

@@ -22,10 +22,10 @@ public class ClassifiedCounterServiceTest {
 
 	@Autowired
 	ClassifiedCounterService classifiedCounterService;
-	
+
 	@Test
 	public void testCounter () {
- 		for (Map.Entry<String, Integer> set: Util.classifiedToWords.entrySet()) {
+		for (Map.Entry<String, Integer> set: Util.classifiedToWords.entrySet()) {
 			Classified classified = new Classified();
 			classified.setText(set.getKey());
 			classified = classifiedCounterService.processClassified(classified);
