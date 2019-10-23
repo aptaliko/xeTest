@@ -27,14 +27,13 @@ public class ClassifiedCounterService {
 		for (String word : wordList) {
 			if (word.length() > 1) {
 				count++;
-				System.out.println(word);
 			}
 		}
 		return count;
 	}
 
 	private String findPrice(String text) {
-		Pattern p = Pattern.compile("(\\d{1,3}(.\\d{3})*(,\\d+)?)(\\p{Sc}| *ευρω| *euro)");
+		Pattern p = Pattern.compile("(\\d{1,3}(.\\d{3})*(,\\d+)?)(\\p{Sc}| *ÎµÏ…Ï�Ï‰| *euro)");
 		Matcher matcher = p.matcher(text);
 		if (matcher.find()) {
 			return matcher.group();
