@@ -1,4 +1,4 @@
-package xeTest;
+package xeTest.services;
 
 import com.fasterxml.jackson.annotation.JsonSetter;
 
