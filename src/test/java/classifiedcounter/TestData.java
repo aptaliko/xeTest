@@ -1,13 +1,11 @@
-package classifiedcounter.Util;
+package classifiedcounter;
 
 import java.util.HashMap;
 import java.util.Map;
-import org.jsoup.Jsoup;
 
-public class Util {
+public class TestData {
 
-	public static final Map<String, Integer> classifiedToWords;
-
+	protected static final Map<String, Integer> classifiedToWords;
 	static {
 		classifiedToWords = new HashMap<>();
 		classifiedToWords.put("﻿Μεσιτικη εταιρεια στα πλαισια της διαρκους αναπτυξης της ζητει \"Assistant Manager\", προσφεροντας ενα ιδιαιτερα ελκυστικο πακετο αμοιβων, μεγαλες προοπτικες περαιτερω εξελιξης. Ο ιδανικος υποψηφιος/α, θα πρεπει να διαθετει: εμπειρια στον κλαδο των ακινητων ή της διαχειρισης ανθρωπινου δυναμικου, οργανωτικο πνευμα, και διαπραγματευτικες ικανοτητες Τηλ επικοινωνιας 6999999999(153) 400€"
@@ -24,7 +22,7 @@ public class Util {
 				, 51);
 	}
 
-	public static String html2text(String html) {
-		return Jsoup.parse(html).text();
+	private TestData() {
+		throw new IllegalStateException("Utility class");
 	}
 }

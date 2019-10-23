@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import classifiedcounter.Util.Util;
 import classifiedcounter.services.Classified;
 import classifiedcounter.services.ClassifiedCounterService;
+import classifiedcounter.util.Util;
 
 @RestController
 @RequestMapping("classified")

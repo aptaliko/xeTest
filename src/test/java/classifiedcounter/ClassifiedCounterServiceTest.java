@@ -11,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import classifiedcounter.Util.Util;
 import classifiedcounter.services.Classified;
 import classifiedcounter.services.ClassifiedCounterService;
 
@@ -25,7 +24,7 @@ public class ClassifiedCounterServiceTest {
 
 	@Test
 	public void testCounter () {
-		for (Map.Entry<String, Integer> set: Util.classifiedToWords.entrySet()) {
+		for (Map.Entry<String, Integer> set: TestData.classifiedToWords.entrySet()) {
 			Classified classified = new Classified();
 			classified.setText(set.getKey());
 			classified = classifiedCounterService.processClassified(classified);

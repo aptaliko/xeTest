@@ -6,7 +6,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import classifiedcounter.Util.Util;
 import classifiedcounter.services.Classified;
 import classifiedcounter.services.ClassifiedCounterService;
 import classifiedcounter.web.ClassifiedCounterController;
@@ -58,7 +57,7 @@ public class ClassifiedCounterControllerTest {
 
 	@Test
 	public void testCounter() throws Exception {
-		for (Map.Entry<String, Integer> set : Util.classifiedToWords.entrySet()) {
+		for (Map.Entry<String, Integer> set : TestData.classifiedToWords.entrySet()) {
 			JSONObject jo = new JSONObject();
 			jo.put("Text", set.getKey());
 	
